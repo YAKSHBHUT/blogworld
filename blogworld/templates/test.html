@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{%block title%} {%endblock%}</title>
+    <!-- {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css'%}"> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css'%}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<script>
+    M.AutoInit();
+</script>
+<style>
+    .btn {
+        font-weight: bold;
+        color: aliceblue;
+        /* border-radius: 50px; */
+        padding:9px 7px 10px 5px;
+        background-color: #4f6c92;
+        text-decoration: none;
+        transition-property: all;
+        transition-duration: 1s;
+    }
+
+    .btn:hover {
+        background-color: rgb(156, 200, 249);
+        color: #171717;
+        font-weight: bold;
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: 2px 2px 5px 2px rgb(156, 200, 249);
+    }
+</style>
+
+<body>
+    <div class="nav">
+        <img class="logo" src="/static\favicon\Screenshot 2022-07-10 103848.png" alt="CHECK YOUR CONNECTION">
+        <a href="#" class="nav-items" style="text-decoration: none;">
+            <li class="nav-list">HOME</li>
+        </a>
+        <a class="nav-items" style="text-decoration: none;">
+            <li class="nav-list">CONTACT US</li>
+        </a>
+        <a class="nav-items" style="text-decoration: none;">
+            <li class="nav-list">CATEGORY</li>
+        </a>
+        <a class="nav-items" style="text-decoration: none;">
+            <li class="nav-list">HELP</li>
+        </a>
+    </div>
+    {%block content%}
+    {%endblock%}
+</body>
+
+</html>

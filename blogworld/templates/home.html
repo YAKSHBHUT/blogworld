@@ -1,0 +1,66 @@
+{%extends 'base.html' %}
+
+{%block title%} Welcome to IBLOGS {%endblock%}
+
+{%block content%}
+<style>
+    .btn {
+        font-weight: bold;
+        color: aliceblue;
+        padding: -8px 7px 10px 5px;
+        background-color: #4f6c92;
+        text-decoration: none;
+        transition-property: all;
+        transition-duration: 1s;
+    }
+
+    .btn:hover {
+        background-color: rgb(156, 200, 249);
+        color: #171717;
+        font-weight: bold;
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: 2px 2px 5px 2px rgb(156, 200, 249);
+    }
+</style>
+<div class="container">
+
+    <div class="row">
+
+        <div class="col s12 ">
+
+
+            {%for p in posts %}
+
+            <div class="row" style="padding-top: 20px;">
+
+                <div class="col s12 m8">
+
+
+                    {{p.content |truncatewords:60 | safe}}
+                    <div class="mt20" style="margin-top:40px ;">
+                        <a href="/blogworld/{{p.url}}" class="btn">Read More..</a>
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <img src="/media/{{p.image}}" class="responsive-img" style="margin-top:20px;">
+
+                </div>
+
+            </div>
+            <hr style="height:3px;background-color: #171717;">
+
+
+            {%endfor %}
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+{%endblock%}
