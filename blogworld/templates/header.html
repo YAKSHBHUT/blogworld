@@ -1,0 +1,61 @@
+<!-- Dropdown Structure -->
+
+<ul id="dropdown1" class="dropdown-content">
+    
+</ul>
+<style>
+    .nav-items {
+        height: 50px;
+        margin: 10px 10px 10px 10px;
+        text-decoration: none;
+        transition-property: all;
+        transition-duration: 1s;
+    }
+
+    .nav-items:hover {
+
+        background-color: rgb(156, 200, 249);
+        color: #464646;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 2px 2px 5px 8000px rgba(0, 0, 0, 0.5);
+    }
+
+    .a {
+        margin: -5px 11px 10px 10px;
+        font-size: 15px;
+        text-decoration: none;
+        transition-property: all;
+        transition-duration: 1s;
+
+    }
+
+    .a:hover {
+        background: none;
+        color: rgb(0, 0, 0);
+    }
+</style>
+
+<nav style="background-color: #4f6c92;">
+    <div class="container">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo"><img style="margin-right: 1rem;
+                margin-top: -2px;
+                margin-left: -1px;
+                height: 40px;
+                width: 55px;
+                border-radius: 29px;
+                display: inline;" class="logo" src="/static\favicon\Screenshot 2022-07-10 103848.png"
+                    alt="CHECK YOUR CONNECTION">BLOGWORLD</a>
+            <ul class="right hide-on-med-and-down">
+                <li class="nav-items"><a class="a" href="/about">ABOUT</a></li>
+                <li class="nav-items"><a class="a" href="/admin">ADMIN</a></li>
+                <!-- Dropdown Trigger -->
+                <li class="nav-items"><a class="dropdown-trigger a" href="#!" data-target="dropdown1">CATEGORY<i
+                            class="material-icons right">arrow_drop_down</i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</nav>
